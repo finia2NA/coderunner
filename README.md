@@ -1,6 +1,8 @@
 # CODE RUNNER
 An MVP to demonstrate running student code securely in Docker containers and checking against a predefined result.
 
+The teacher can define an exercise stub (starting point), a number of test cases and a canonical solution. When a student submits their solution, the backend can use the /run endpoint to run the code in a freshly set up docker container and compare its output on the test cases.
+
 The web server exposes the `/stub` endpoint, where the code to complete is retrieved from.
 More importantly, the `/run` endpoint is exposed, to which a user can post with a body that contains the "`code`" key and the code to run as the value.
 
